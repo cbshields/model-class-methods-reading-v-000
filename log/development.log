@@ -1339,3 +1339,77 @@ Processing by PostsController#index as HTML
   [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 12]]
   Rendered posts/index.html.erb within layouts/application (57.0ms)
 Completed 200 OK in 375ms (Views: 341.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Old+News&commit=Filter" for 12.28.149.175 at 2018-04-17 20:05:28 +0000
+Cannot render console from 12.28.149.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Old News", "commit"=>"Filter"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (created_at <'2018-04-17 00:00:00.000000')[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered posts/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 399ms (Views: 368.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Today&commit=Filter" for 12.28.149.175 at 2018-04-17 20:05:36 +0000
+Cannot render console from 12.28.149.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Today", "commit"=>"Filter"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (created_at >='2018-04-17 00:00:00.000000')
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 134ms (Views: 131.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=&commit=Filter" for 12.28.149.175 at 2018-04-17 20:05:39 +0000
+Cannot render console from 12.28.149.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"", "commit"=>"Filter"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered posts/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=&commit=Filter" for 12.28.149.175 at 2018-04-17 20:08:54 +0000
+Cannot render console from 12.28.149.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"", "commit"=>"Filter"}
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered posts/index.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 88ms (Views: 69.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Old+News&commit=Filter" for 12.28.149.175 at 2018-04-17 20:08:59 +0000
+Cannot render console from 12.28.149.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Old News", "commit"=>"Filter"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (created_at <'2018-04-17 00:00:00.000000')
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered posts/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=10&date=&commit=Filter" for 12.28.149.175 at 2018-04-17 20:09:05 +0000
+Cannot render console from 12.28.149.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"10", "date"=>"", "commit"=>"Filter"}
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 10[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 32ms (Views: 25.8ms | ActiveRecord: 0.7ms)
